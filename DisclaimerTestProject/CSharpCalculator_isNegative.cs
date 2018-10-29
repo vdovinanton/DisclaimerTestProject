@@ -16,9 +16,9 @@ namespace DisclaimerTestProject
         }
 
         private Calculator _calc;
+        private IList<bool> _resultCollection;
         private IEnumerable<double> _positiveNumbers;
         private IEnumerable<double> _negativeNumbers;
-        private IList<bool> _resultCollection;
 
         [OneTimeSetUp]
         public void OneTimeSetUp()

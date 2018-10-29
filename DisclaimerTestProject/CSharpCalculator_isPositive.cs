@@ -9,16 +9,10 @@ namespace DisclaimerTestProject
     [TestFixture]
     public class CSharpCalculator_isPositive
     {
-        [TearDown]
-        public void Cleanup()
-        {
-            _resultCollection = new List<bool>();
-        }
-
         private Calculator _calc;
+        private IList<bool> _resultCollection;
         private IEnumerable<double> _positiveNumbers;
         private IEnumerable<double> _negativeNumbers;
-        private IList<bool> _resultCollection;
 
         [OneTimeSetUp]
         public void OneTimeSetUp()
@@ -39,6 +33,12 @@ namespace DisclaimerTestProject
                 -5
             };
 
+            _resultCollection = new List<bool>();
+        }
+
+        [TearDown]
+        public void Cleanup()
+        {
             _resultCollection = new List<bool>();
         }
 
